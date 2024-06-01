@@ -1,0 +1,42 @@
+.main_caterogy{
+    width: 310px;
+    height: 774px;
+    background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+}
+.categories{
+    width: 268px;
+    height: 283px;
+    padding: 15px;
+}
+.categories_cost{
+    width: 226px;
+    height: 133px;
+    padding: 15px;
+}
+.categories_size{
+    width: 268px;
+    height: 143px;
+    padding: 15px;
+}
+.categories_options{
+    margin-left: 10px;
+}
+.category_header{
+    margin-top: 0;
+}
+.categories_cost_down_range{
+    padding-left: 10px;
+}
+.categories_size_down{
+    padding-left: 10px;
+}
+.categories,.categories_cost,.categories_size{
+    /* margin-left: 29px; */
+    background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+    width: 280px;
+}
+.categories_ad img{
+    /* width: 310px; */
+    position: relative;
+    right: 29px;
+}

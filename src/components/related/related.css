@@ -1,0 +1,14 @@
+.relatedMain{
+    margin-bottom: 50px;
+}
+.relatedDown{
+    display: flex;
+    justify-content: space-between;
+}
+.relatedUp h2{
+    color: rgba(70, 163, 88, 1);
+
+}
+.relatedUp{
+    border-bottom: 1px solid rgba(70, 163, 88, 0.5);
+}

@@ -1,0 +1,85 @@
+.EmptyCart{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.EmptyImg{
+    width: 250px;
+    height: 250px;
+}
+.EmptyCart h1{
+    color: rgba(70, 163, 88, 1) ;
+    margin-left: 50px;
+}
+.cart{
+    display: flex;
+}
+.cartLeft{
+    width: 100%;
+}
+.cartInfo{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    margin-top: 40px;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+.infoName,.infoQuan,.infoTotal,.infoPrice{
+    height: 100%;
+}
+.infoName{
+    width: 35%;
+}
+.infoPrice{
+    width: 15%;
+}
+.infoTotal,.infoQuan{
+    width: 25%;
+}
+.cartRight{
+    width: 40%;
+    height: 400px;
+}
+.OrderBtn{
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color:rgba(70, 163, 88, 1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.succesMain{
+    width: 508px;
+    height: 176px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.succesWrap{
+    width: 1490px;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+.close{
+    position: relative;
+    left: 235px;
+    bottom: 165px;
+    cursor: pointer;
+}
+.succesMain img{
+    margin-top: 65px;
+}

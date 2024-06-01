@@ -1,0 +1,28 @@
+.blogsMain{
+    width: 1202px;
+    height: 447px;
+    margin: 25px 0 50px 0;
+}
+.blogsUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.blogsUp h2{
+    margin-bottom: 0;
+}
+.blogsDown{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.blogs1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}

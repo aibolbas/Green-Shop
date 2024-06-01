@@ -1,0 +1,26 @@
+.main_market{
+    margin: 50px 0 0 0 ;
+    display: flex;
+}
+.market{
+    width: 840px;
+    height: 1190px;
+}       
+.market_head_options{
+    display: flex;
+}
+.market_head_options p{
+    margin-left: 50px;
+}
+.market_head_options_text{
+    margin-left: 0!important;
+}
+.market_products{
+    width: 100%;
+    height: 1000px;
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 250px ;
+    grid-template-rows: 350px;
+    grid-template-columns: repeat(3, 1fr);
+}

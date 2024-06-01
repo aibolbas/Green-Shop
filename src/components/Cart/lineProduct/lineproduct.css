@@ -1,0 +1,69 @@
+.LineProduct{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color:rgba(251, 251, 251, 1);
+}
+.proImg{
+    width: 60px;
+    height: 60px;
+}
+.productImg{
+    width: 10%;
+    height: 100%;
+
+}
+.productOption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productName{
+    width: 25%;
+    height: 100%;
+}
+.productPrice{
+    width: 173px;
+    display: flex;
+    align-items: center;
+}
+.Dec{
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: rgba(70, 163, 88, 1);
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.productQuan{
+    width: 288px;
+    display: flex;
+    align-items: center;
+}
+.Inc{
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: rgba(70, 163, 88, 1);
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.proPrice{
+    color:  rgba(70, 163, 88, 1);
+}
+.productDel{
+    margin-left: 55px;
+}
+.count{
+    width: 18px;
+    
+}
+.productTotal{
+    width: 53px;
+}

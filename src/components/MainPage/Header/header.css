@@ -1,0 +1,200 @@
+.Head{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+}
+.logo_pic{
+    width: 34.3px;
+    height: 34.3px;
+    margin-right: 5px;
+}
+.Logo{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(70, 163, 88, 1);
+    font-size: 19px;
+    font-weight: 900;
+}
+.Logo p{
+    margin: 0;
+}
+.Links{
+    width: 30%;
+    margin: 0 20% 0 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Special{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search_pic{
+    width: 20px;
+    height: 20px;
+}
+.login_button{
+    background-color: rgba(70, 163, 88, 1);
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+}
+.orin{
+    width: 5px;
+    height: 1px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.active{
+    border-bottom: 3px solid rgba(70, 163, 88, 1);
+}
+.home_link{
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    cursor: pointer;
+}
+.Loginwrap{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.LoginMain{
+    width: 500px;
+    min-height:300px ;
+    background-color: white;
+    border-bottom: 5px solid rgba(70, 163, 88, 1);
+    transition: 1s;
+}
+.LoginUp{
+    display: flex;
+    justify-content: center;
+}
+.rectan{
+    height: 40px;
+    width: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 5px;
+    cursor:default;
+}
+.LoginTitle{
+    margin-right: 10px;
+    color: rgba(70, 163, 88, 1);
+    cursor: pointer;
+}
+.RegisTitle{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.LoginDown{
+    width: 100%;
+    min-height: 250px;
+
+}
+.LoginDiv{
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.LoginInput{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(234, 234, 234, 1);
+    outline: rgba(70, 163, 88, 1) ;
+    border-radius: 5px;
+    padding-left:10px ;
+    font-size: 16px;
+}
+.LoginInput:focus{
+    border: 1px solid rgba(70, 163, 88, 1);
+}
+.LoginBtn{
+    width: 300px;
+    height: 45px;
+    top: 463px;
+    left: 570px;
+    gap: 0px;
+    border-radius: 5px;
+    opacity: 0px;
+    border: none;
+    background-color: rgba(70, 163, 88, 1);
+    cursor: pointer;
+    color: White;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.LoginClose{
+    position: relative;
+    left: 175px;
+    top: 5px;
+    color: rgba(70, 163, 88, 1);
+    cursor: pointer;
+}
+.RegisDiv{
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.adaptiveInp{
+    width: 200px;
+    height: 30px;
+    border-radius:10px ;
+    padding-left: 30px;
+    display: none;
+}
+@media screen and (max-width:480px ) {
+    .Logo,.Links{
+      display: none;
+    }
+    .search_pic{
+        position: relative;
+        right: 230px;
+    }
+    .Search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .adaptiveInp{
+        display: block;
+    }
+    .Cart{
+        margin-right:10px ;
+    }
+  }
