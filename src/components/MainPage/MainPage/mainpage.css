@@ -49,3 +49,44 @@
     margin-top: 0;
     margin-bottom: 60px;
 }
+.AdaptiveMainPage{
+    display: none;
+}
+@media screen and (max-width:480px ) {
+    .Mainpage{
+        display: none;
+    }
+    .adaptiveMainPageImg{
+        width: 100%;
+        height: 100%;
+        margin-bottom: -170px;
+    }
+    .AdaptiveMainPage{
+        margin: 20px 0 0 0;
+        display: block;
+    }
+    .adaptiveMainPageText{
+        width: 206px;
+        height: 114px;
+        position: relative;
+        bottom: 0px;
+        left: 20px;
+    }
+    .AdaptMainLink{
+        text-decoration: none;
+        color: rgba(70, 163, 88, 1);
+        display: flex;
+        position: relative;
+        bottom: 10px;
+        left: 20px;
+    }
+    .AdaptMainLink p{
+        font-size: 16px;
+    }
+    .Arrow{
+        position: relative;
+        width: 20px;
+        margin-top: 4px;
+        margin-left: 5px;
+    }
+  }

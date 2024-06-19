@@ -1,10 +1,28 @@
 import React from "react";
 import { useRef } from "react";
-import { Link, Outlet, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './header.css'
+import { useState } from 'react';
+import axios from 'axios';
 
 
 function Header(){
+
+    const [username,setUsername] = useState('');
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+  
+
+  const handleSubmit = async(e) =>{
+    try{
+      const response = await axios.post('/api/users/register', {username, email,password});
+      console.log(response.data);
+    }
+    catch(err){
+      console.error(err.response?.data);
+    }
+  };
+
     function reload(){
         Location.reload()
     }
@@ -67,17 +85,39 @@ function Header(){
                     <div className="LoginDown">
                         <div ref={Login} className="LoginDiv">
                             <p>Enter your username and password to login.</p>
-                            <input className="LoginInput" placeholder="Example@gmail.com" type="email" />
-                            <input className="LoginInput" placeholder="Password" type="password" />
-                            <button className="LoginBtn">Login</button>
+                            <form>
+                                <input className="LoginInput" placeholder="Example@gmail.com" type="email" />
+                                <input className="LoginInput" placeholder="Password" type="password" />
+                                <button type="submit" className="LoginBtn">Login</button>
+                            </form>
                         </div>
                         <div ref={Regis} className="RegisDiv">
                             <p>Enter your email and password to register.</p>
-                            <input className="LoginInput" placeholder="UserName" type="text" />
-                            <input className="LoginInput" placeholder="Example@gmail.com" type="email" />
-                            <input className="LoginInput" placeholder="Password" type="password" />
-                            <input className="LoginInput" placeholder="Confirm Password" type="password" />
-                            <button className="LoginBtn">Register</button>
+                            {/* <form onSubmit={handleSubmitR}>
+                                <input className="LoginInput" placeholder="UserName" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                                <input className="LoginInput" placeholder="Example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input className="LoginInput" placeholder="Password" type="password"value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <input className="LoginInput" placeholder="Confirm Password" type="password" />
+                                <button type="submit" className="LoginBtn">Register</button>
+                            </form> */}
+
+
+<form onSubmit={handleSubmit}>
+      <h2>Register</h2>
+      <div>
+        <label>Username:</label>
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type="password" value={password} onChange={(e) =>setPassword(e.target.value)}/>
+      </div>
+      <button type="submit">Register</button>
+    </form>
                         </div>
                     </div>
                 </div>

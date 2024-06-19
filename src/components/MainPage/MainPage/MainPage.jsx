@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Router } from "react-router-dom";
+import { Link, Outlet, Router } from "react-router-dom";
 import BlogS from "../blogs/blogs";
 import Blogs from "../blogs/blogs";
 import Category from "../category/category";
@@ -26,6 +26,16 @@ function MainPage(){
                     <img className="Mainpage_img_small" src={process.env.PUBLIC_URL + '/pics/Plant.svg'} alt="" />
                 </div>
             </div>
+            <div className="AdaptiveMainPage">
+                <img className="adaptiveMainPageImg" src={process.env.PUBLIC_URL + '/pics/AdaptPlant.png'} alt="" />
+                <img className="adaptiveMainPageText" src={process.env.PUBLIC_URL + '/pics/Group.svg'} alt="" />
+                <Link to={"/shop"} className="AdaptMainLink">
+                    <p>Shop Now</p>
+                    <img className="Arrow" src={process.env.PUBLIC_URL + '/pics/AdaptArrow.svg'} alt="" />
+                    </Link>
+                
+            </div>
+            
             <Market></Market>
             <Plantcare></Plantcare>
             <BlogS></BlogS>

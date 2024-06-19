@@ -29,6 +29,14 @@ function Market () {
                     <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
                     <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
                 </div>
+                <div className="adaptmarket_products">
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                </div>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ function Category(){
                         <p>Accessories</p>
                 </div>
             </div>
-            <div className="categories_cost">
+            {/* <div className="categories_cost">
                 <div className="categories_cost_up">
                     <h3>Price Range</h3>
                 </div>
@@ -30,7 +30,7 @@ function Category(){
                     </div>
 
                 </div>
-            </div>
+            </div> */}
             <div className="categories_size">
                 <div className="categories_size_up">
                     <h3>Size</h3>

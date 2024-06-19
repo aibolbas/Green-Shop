@@ -12,3 +12,8 @@
 .relatedUp{
     border-bottom: 1px solid rgba(70, 163, 88, 0.5);
 }
+@media screen and (max-width:480px ) {
+    .relatedMain{
+        display: none;
+    }
+  }

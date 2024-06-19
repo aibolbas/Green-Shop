@@ -42,3 +42,40 @@
 .miss{
     margin-top:0 ;
 }
+.adaptplantcare_main{
+    display: none;
+}
+@media screen and (max-width:480px ) {
+    .adaptplantcare_main{
+        display: block;
+    }
+    .plantcare_main{
+        display: none;
+    }
+    .plantareImg,.plantCareImgLeft{
+        width: 200px;
+        height: 200px;
+        margin-right: 60px;
+    }
+    .plantcarePic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .plantcareRight{
+        width: 384px;
+    }
+    .plantcareText{
+        width: 126px !important;
+        height: auto;
+    }
+    .plantCareImgLeft{
+        margin-right: 100px !important; 
+    }
+    .plantcareTextLeft{
+        width: 126px !important;
+    }
+    .adaptplantcare_main{
+        margin-bottom: 50px;
+    }
+  }

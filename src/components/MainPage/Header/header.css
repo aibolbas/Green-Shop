@@ -83,6 +83,7 @@
     justify-content: center;
     align-items: center;
     display: none;
+    z-index: 3;
 }
 .LoginMain{
     width: 500px;
@@ -90,6 +91,7 @@
     background-color: white;
     border-bottom: 5px solid rgba(70, 163, 88, 1);
     transition: 1s;
+    z-index: 4;
 }
 .LoginUp{
     display: flex;
@@ -196,5 +198,8 @@
     }
     .Cart{
         margin-right:10px ;
+    }
+    .LoginTitle,.RegisTitle{
+        font-size: 16px;
     }
   }

@@ -70,3 +70,45 @@
     color: rgba(70, 163, 88, 1);
     border-bottom: 1px solid rgba(70, 163, 88, 0.5);
 }
+@media screen and (max-width:480px ) {
+    .shopUp{
+        flex-direction: column;
+        min-height: 735px;
+    }
+    .shopUpRightLeft{
+        width: 300px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .shopUpRightLeft img{
+        width: 300px;
+        height: 100%;
+    }
+    .shopUpRightRight{
+        height: 400px;
+    }
+    .shopUpRight{
+        height: 400px;
+    }
+    .shopUpLeft{
+        width: 100%;
+        height: auto;
+    }
+    .shopUpLeft p{
+        font-size: 16px;
+    }
+    .price{
+        font-size: 16px;
+    }
+    .shopDownMain{
+        display: none;
+    }
+    .shopDown p{
+        font-size: 16px;
+    }
+    .shopMain{
+        height: auto;
+    }
+  }

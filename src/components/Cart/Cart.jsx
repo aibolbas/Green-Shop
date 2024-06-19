@@ -38,7 +38,6 @@ function Cart(){
                         <LineProduct></LineProduct>
                     </div>
                 </div>
-                {/* <div className="cartRight"></div> */}
             </div>
             <button onClick={reveal} className="OrderBtn">Order</button>
             <div ref={ref} className="succesWrap">
