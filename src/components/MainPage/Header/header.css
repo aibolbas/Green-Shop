@@ -129,6 +129,12 @@
     flex-direction: column;
 
 }
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .LoginInput{
     width: 300px;
     height: 40px;
@@ -143,7 +149,7 @@
     border: 1px solid rgba(70, 163, 88, 1);
 }
 .LoginBtn{
-    width: 300px;
+    width: 313px;
     height: 45px;
     top: 463px;
     left: 570px;
@@ -201,5 +207,11 @@
     }
     .LoginTitle,.RegisTitle{
         font-size: 16px;
+    }.LoginMain{
+        width: 90%;
+    }
+    .LoginClose{
+        position: relative;
+        left: 140px;
     }
   }

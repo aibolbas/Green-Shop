@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import './header.css'
 import { useState } from 'react';
 import axios from 'axios';
@@ -17,11 +17,25 @@ function Header(){
     try{
       const response = await axios.post('/api/users/register', {username, email,password});
       console.log(response.data);
+      
     }
     catch(err){
       console.error(err.response?.data);
     }
   };
+
+  const handleLogin = async(e) => {
+    try{
+        const response = await axios.post("/api/users/login", {email,password},{withCredentials:true})
+        alert(response.data.message)
+    }catch(error){
+        console.error("error", error.response?.data || error.message)
+        alert()
+        if (error.response?.data.message || error.message) {
+            
+        }
+    }
+  }
 
     function reload(){
         Location.reload()
@@ -84,15 +98,22 @@ function Header(){
                     </div>
                     <div className="LoginDown">
                         <div ref={Login} className="LoginDiv">
-                            <p>Enter your username and password to login.</p>
-                            <form>
-                                <input className="LoginInput" placeholder="Example@gmail.com" type="email" />
-                                <input className="LoginInput" placeholder="Password" type="password" />
-                                <button type="submit" className="LoginBtn">Login</button>
+                            
+                            <form onSubmit={handleLogin}>
+                                <h2>Login</h2>
+                                <div>
+                                  
+                                  <input placeholder="Example@gmail.com" className="LoginInput" type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
+                                </div>
+                                <div>
+                                  
+                                  <input placeholder="Password" className="LoginInput" type="password" value={password} onChange={(e) =>{setPassword(e.target.value)}}/>
+                                </div>
+                                <button className="LoginBtn" type="submit">Login</button>
                             </form>
                         </div>
                         <div ref={Regis} className="RegisDiv">
-                            <p>Enter your email and password to register.</p>
+                            
                             {/* <form onSubmit={handleSubmitR}>
                                 <input className="LoginInput" placeholder="UserName" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                                 <input className="LoginInput" placeholder="Example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -105,18 +126,17 @@ function Header(){
 <form onSubmit={handleSubmit}>
       <h2>Register</h2>
       <div>
-        <label>Username:</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+        
+        <input placeholder="Username" className="LoginInput" type="text" value={username} onChange={(e) => {setUsername(e.target.value)}}/>
       </div>
       <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input placeholder="Example@gmail.com" className="LoginInput" type="email" value={email} onChange={(e) => {setEmail(e.target.value);}} />
       </div>
       <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) =>setPassword(e.target.value)}/>
+        
+        <input placeholder="Password" className="LoginInput" type="password" value={password} onChange={(e) =>{setPassword(e.target.value); }}/>
       </div>
-      <button type="submit">Register</button>
+      <button className="LoginBtn" type="submit">Register</button>
     </form>
                         </div>
                     </div>

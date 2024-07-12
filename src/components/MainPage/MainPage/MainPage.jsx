@@ -19,7 +19,7 @@ function MainPage(){
                         <p className="Mainpage_down_par">We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                         <p className="Mainpage_down_par2">Use our plants to create an unique Urban Jungle. Order your favorite plants!</p>
                     </div>
-                    <button className="shop">SHOP NOW</button>
+                    <Link to={"/shop"}><button className="shop">SHOP NOW</button></Link>
                 </div>
                 <div className="Mainpage_right">
                     <img className="Mainpage_img" src={process.env.PUBLIC_URL + '/pics/Plant.svg'} alt="" />
