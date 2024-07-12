@@ -19,8 +19,14 @@
     font-size: 19px;
     font-weight: 900;
 }
+.logolink{
+    color: rgba(70, 163, 88, 1);
+    text-decoration: none;
+    display: flex;
+}
 .Logo p{
-    margin: 0;
+    margin: 7px 0 0 0;
+    
 }
 .Links{
     width: 30%;
@@ -40,6 +46,8 @@
 .search_pic{
     width: 20px;
     height: 20px;
+    z-index: 2;
+    position: relative;
 }
 .login_button{
     background-color: rgba(70, 163, 88, 1);
@@ -84,6 +92,7 @@
     align-items: center;
     display: none;
     z-index: 3;
+
 }
 .LoginMain{
     width: 500px;
@@ -92,6 +101,8 @@
     border-bottom: 5px solid rgba(70, 163, 88, 1);
     transition: 1s;
     z-index: 4;
+    transition: 1s;
+    border-radius: 10px;
 }
 .LoginUp{
     display: flex;
@@ -145,7 +156,7 @@ form{
     padding-left:10px ;
     font-size: 16px;
 }
-.LoginInput:focus{
+.LoginInput:focus ,.SearchInp:focus{
     border: 1px solid rgba(70, 163, 88, 1);
 }
 .LoginBtn{
@@ -165,10 +176,11 @@ form{
 }
 .LoginClose{
     position: relative;
-    left: 175px;
+    left: 170px;
     top: 5px;
     color: rgba(70, 163, 88, 1);
     cursor: pointer;
+    font-size: 19px;
 }
 .RegisDiv{
     width: 100%;
@@ -184,6 +196,46 @@ form{
     height: 30px;
     border-radius:10px ;
     padding-left: 30px;
+    display: none;
+}
+.SearchInp{
+    width: 200px;
+    height: 30px;
+    border-radius:10px ;
+    padding-right: 30px;
+    padding-left:5px ;
+    border: 1px solid rgba(234, 234, 234, 1);
+    outline: rgba(70, 163, 88, 1) ;
+    font-size: 16px;
+
+}
+.searchDiv{
+    position: absolute;
+    left: 900px;
+    top: 7px;
+    transition: 1s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.searchWin{
+    width: 237px;
+    min-height:50px ;
+    background-color: rgb(237, 237, 237);
+    display: none;
+}
+.searchOth{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(237, 237, 237);
+}
+.searchOth:hover{
+    background-color: rgb(225, 225, 225);
+    cursor: pointer;
+}
+.dais,.ever,.alum{
     display: none;
 }
 @media screen and (max-width:480px ) {
@@ -213,5 +265,8 @@ form{
     .LoginClose{
         position: relative;
         left: 140px;
+    }
+    .searchDiv{
+        display: none;
     }
   }

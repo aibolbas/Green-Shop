@@ -5,7 +5,7 @@ import './product.css'
 function Product(props){
     return(
         <>
-        <Link className="product_link" to='/shop'>
+        <Link className="product_link" to={props.link}>
             <div className="product_carcass">
                 <div className="product_pic">
                     <img src={props.img} alt="" className="product_img" />

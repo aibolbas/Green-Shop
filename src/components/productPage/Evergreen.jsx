@@ -4,18 +4,18 @@ import { ThemeContext } from "../context/LoginContext";
 import Related from "../related/related";
 import './productpage.css'
 
-function ProductPage(){
+function Evergreen(){
     const {  toggle, log } = React.useContext(ThemeContext)
-    const [img,setImg] = useState(process.env.PUBLIC_URL + '/pics/Daisy.svg')
+    const [img,setImg] = useState(process.env.PUBLIC_URL + '/pics/Evergreen.svg')
     function click1(e){
-        setImg(process.env.PUBLIC_URL + '/pics/Daisy.svg')
+        setImg(process.env.PUBLIC_URL + '/pics/Evergreen.svg')
     }
     function click2(e){
         setImg(process.env.PUBLIC_URL + '/pics/SecondPlant.svg')
     }
     function AddCart(e){
         if (log === true) {
-            localStorage.setItem("Product",JSON.stringify(["daisy"]))
+            localStorage.setItem("Evergreen",JSON.stringify(["Evergreen"]))
         }else{
             alert("Login First")
         }
@@ -27,9 +27,9 @@ function ProductPage(){
                 <div className="shopUp">
                     <div className="shopUpRight">
                         <div className="shopUpRightRight">
-                            <img onClick={click1} src={process.env.PUBLIC_URL + '/pics/Daisy.svg'} alt="" />
+                            <img onClick={click1} src={process.env.PUBLIC_URL + '/pics/Evergreen.svg'} alt="" />
                             <img onClick={click2} src={process.env.PUBLIC_URL + '/pics/SecondPlant.svg'} alt="" />
-                            <img onClick={click1} src={process.env.PUBLIC_URL + '/pics/Daisy.svg'} alt="" />
+                            <img onClick={click1} src={process.env.PUBLIC_URL + '/pics/Evergreen.svg'} alt="" />
                             <img onClick={click2} src={process.env.PUBLIC_URL + '/pics/SecondPlant.svg'} alt="" />
                         </div>
                         <div className="shopUpRightLeft">
@@ -37,8 +37,8 @@ function ProductPage(){
                         </div>
                     </div>
                     <div className="shopUpLeft">
-                        <h3>Barbenton Daisy</h3>
-                        <p className="price">119$</p>
+                        <h3>chinese Evergreen</h3>
+                        <p className="price">39$</p>
                         <h4>Short Description</h4>
                         <p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. </p>
                         <button onClick={AddCart} className="shopBtn">Add to cart</button>
@@ -63,4 +63,4 @@ function ProductPage(){
         </>
     )
 }
-export default ProductPage
+export default Evergreen

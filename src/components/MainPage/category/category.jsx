@@ -9,13 +9,13 @@ function Category(){
                     <h3 className="category_header">Categories</h3>
                 </div>
                 <div className="categories_options">
-                        <p>House Plants</p>
-                        <p>Potted Plants</p>
-                        <p>Seeds</p>
-                        <p>Succulents</p>
-                        <p>Trerrariums</p>
-                        <p>Gardening</p>
-                        <p>Accessories</p>
+                        <p className="Cursor">House Plants</p>
+                        <p className="Cursor">Potted Plants</p>
+                        <p className="Cursor">Seeds</p>
+                        <p className="Cursor">Succulents</p>
+                        <p className="Cursor">Trerrariums</p>
+                        <p className="Cursor">Gardening</p>
+                        <p className="Cursor">Accessories</p>
                 </div>
             </div>
             {/* <div className="categories_cost">
@@ -36,9 +36,9 @@ function Category(){
                     <h3>Size</h3>
                 </div>
                 <div className="categories_size_down">
-                    <p>Big</p>
-                    <p>Medium</p>
-                    <p>Small</p>
+                    <p className="Cursor">Big</p>
+                    <p className="Cursor">Medium</p>
+                    <p className="Cursor">Small</p>
                 </div>
             </div>
             <div className="categories_ad">

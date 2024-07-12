@@ -19,23 +19,23 @@ function Market () {
                     <div className="market_head_sorting"></div>
                 </div>
                 <div className="market_products">
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/shop'} img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/ever'} img={process.env.PUBLIC_URL + '/pics/Evergreen.svg'}  name={'Barbenton Daisy'} price={"39.00$"}/>
+                    <Product link={'/alum'} img={process.env.PUBLIC_URL + '/pics/Aluminum.svg'}  name={'Aluminum Plant '} price={"179.00$"}/>
+                    <Product link={'/alum'} img={process.env.PUBLIC_URL + '/pics/Aluminum.svg'}  name={'Aluminum Plant '} price={"179.00$"}/>
+                    <Product link={'/shop'} img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/ever'} img={process.env.PUBLIC_URL + '/pics/Evergreen.svg'}  name={'Barbenton Daisy'} price={"39.00$"}/>
+                    <Product link={'/ever'} img={process.env.PUBLIC_URL + '/pics/Evergreen.svg'}  name={'Barbenton Daisy'} price={"39.00$"}/>
+                    <Product link={'/alum'} img={process.env.PUBLIC_URL + '/pics/Aluminum.svg'}  name={'Aluminum Plant '} price={"179.00$"}/>
+                    <Product link={'/shop'} img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
                 </div>
                 <div className="adaptmarket_products">
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
-                    <Product img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/shop'} img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/ever'} img={process.env.PUBLIC_URL + '/pics/Evergreen.svg'}  name={'Barbenton Daisy'} price={"39.00$"}/>
+                    <Product link={'/alum'} img={process.env.PUBLIC_URL + '/pics/Aluminum.svg'}  name={'Aluminum Plant '} price={"179.00$"}/>
+                    <Product link={'/alum'} img={process.env.PUBLIC_URL + '/pics/Aluminum.svg'}  name={'Aluminum Plant '} price={"179.00$"}/>
+                    <Product link={'/shop'} img={process.env.PUBLIC_URL + '/pics/Daisy.svg'}  name={'Barbenton Daisy'} price={"119.00$"}/>
+                    <Product link={'/ever'} img={process.env.PUBLIC_URL + '/pics/Evergreen.svg'}  name={'Barbenton Daisy'} price={"39.00$"}/>
                 </div>
             </div>
         </div>

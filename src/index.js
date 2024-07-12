@@ -10,6 +10,9 @@ import MainPage from './components/MainPage/MainPage/MainPage';
 import Header from './components/MainPage/Header/Header';
 import ProductPage from './components/productPage/productpage';
 import Cart from './components/Cart/Cart';
+import NetworkErr from './components/ErrorPage/NetworkErr';
+import Evergreen from './components/productPage/Evergreen';
+import Aluminum from './components/productPage/Aluminum';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +26,9 @@ root.render(
           <Route exact path="/blogs" element={<Blogs/>} />
           <Route exact path="/shop" element={<ProductPage/>} />
           <Route exact path="/cart" element={<Cart/>} />
+          <Route exact path="/NE" element={<NetworkErr/>} />
+          <Route exact path="/ever" element={<Evergreen/>} />
+          <Route exact path="/alum" element={<Aluminum/>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -4,13 +4,17 @@ import { Link, redirect } from "react-router-dom";
 import './header.css'
 import { useState } from 'react';
 import axios from 'axios';
+import { ThemeContext } from "../../context/LoginContext";
+
 
 
 function Header(){
 
+    const {  toggle, log ,Search , toggleS} = React.useContext(ThemeContext)
+
     const [username,setUsername] = useState('');
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
   
 
   const handleSubmit = async(e) =>{
@@ -24,27 +28,35 @@ function Header(){
     }
   };
 
+  function Sub(){
+    window.location.href = 'http://localhost:3002/NE'
+  }
+
   const handleLogin = async(e) => {
     try{
         const response = await axios.post("/api/users/login", {email,password},{withCredentials:true})
+        toggle()
         alert(response.data.message)
     }catch(error){
         console.error("error", error.response?.data || error.message)
-        alert()
         if (error.response?.data.message || error.message) {
-            
+            window.location.href = 'http://localhost:3004/NE'
         }
     }
   }
 
-    function reload(){
-        Location.reload()
-    }
+    
     const wrap = useRef()
     const Login = useRef()
     const Regis = useRef()
     const LoginT = useRef()
     const RegisT = useRef()
+    const Sdiv = useRef()
+    const Sinp = useRef()
+    const Swin = useRef()
+    const Slin = useRef()
+    const Sever = useRef()
+    const Salum = useRef()
     function closeLogin(){
         wrap.current.style.display = "none"
     }
@@ -63,11 +75,107 @@ function Header(){
         LoginT.current.style.color = "Black"
         RegisT.current.style.color = "rgba(70, 163, 88, 1)"
     }
+    
+
+    function Reload(){
+        if (log === true) {
+            window.location.href = 'http://localhost:3004/cart'
+        }else{
+            LoginOpen()
+        }
+        
+    }
+
+    const [pass,setPass] = useState(false)
+    const [ever,setever] = useState(false)
+    const [alum,setalum] = useState(false)
+    const [dai,setdai] = useState(false)
+
+    function Se(){
+        let B = "barbenton daisy"
+        let E = "chinese evergreen"
+        let A = "aluminum plant"
+
+        if (Sinp.current.value.length > 1) {
+            setPass(true)
+        }
+        
+        if (B.toLocaleUpperCase().search(Sinp.current.value.toLocaleUpperCase()) !== -1) {
+            setdai(true)
+
+        }else{
+            setdai(false)
+        }
+        if (E.toLocaleUpperCase().search(Sinp.current.value.toLocaleUpperCase()) !== -1) {
+            setever(true)
+
+        }else{
+            setever(false)
+        }
+        if (A.toLocaleUpperCase().search(Sinp.current.value.toLocaleUpperCase()) !== -1) {
+            setalum(true)
+
+        }else{
+            setalum(false)
+        }
+        if(Sinp.current.value.length <= 1){
+            setPass(false)
+            setdai(false)
+            setalum(false)
+            setever(false)
+        }
+        if (pass === true) {
+            Swin.current.style.display = 'block'
+        }else{
+            Swin.current.style.display = 'none'
+        }
+        if (ever === true) {
+            Sever.current.style.display = 'block'
+        }else{
+            Sever.current.style.display = 'none'
+        }
+        if (dai === true) {
+            Slin.current.style.display = 'block'
+        }else{
+            Slin.current.style.display = 'none'
+        }
+        if (alum === true) {
+            Salum.current.style.display = 'block'
+        }else{
+            Salum.current.style.display = 'none'
+        }
+        
+    }
+
     return(
         <div className="Head">
+            <div ref={Sdiv} className="searchDiv">
+                <form >
+                        <input ref={Sinp} onInput={Se}  type="text" className='SearchInp'  placeholder="Search your plants"/>
+                        </form>
+                        <div ref={Swin} className="searchWin">
+                            <Link ref={Slin} className="link dais" to={'/shop'}><div className="searchOth">
+                                <img src={process.env.PUBLIC_URL + '/pics/Daisy.svg'} className="logo_pic" alt="" />
+                                <p>Barbenton Daisy</p>
+                                <p>119$</p>
+                            </div></Link>
+                            <Link ref={Sever} className="link ever" to={'/ever'}><div className="searchOth">
+                                <img src={process.env.PUBLIC_URL + '/pics/Evergreen.svg'} className="logo_pic" alt="" />
+                                <p>Chinese Evergreen</p>
+                                <p>39$</p>
+                            </div></Link>
+                            <Link ref={Salum} className="link alum" to={'/alum'}><div className="searchOth">
+                                <img src={process.env.PUBLIC_URL + '/pics/Aluminum.svg'} className="logo_pic" alt="" />
+                                <p>Aluminum Plant</p>
+                                <p>179$</p>
+                            </div></Link>
+                        </div>
+                    </div>
             <div className="Logo">
+                <Link className="logolink" to={'/main'}>
                 <img src={process.env.PUBLIC_URL + '/pics/Logo.svg'} className="logo_pic" alt="" />
                 <p>GREENSHOP</p>
+                    </Link>
             </div>
             <div className="Links">
                 <Link className="link " to='/main'> <div className="home_link">Home</div></Link>
@@ -78,11 +186,15 @@ function Header(){
             <div className="Special">
                 <div className="icon Search">
                     <input type="text" className="adaptiveInp" placeholder="Search your plants"/>
+                    
+                    
 
                     <img src={process.env.PUBLIC_URL + '/pics/Search.svg'} className="search_pic" alt="" />
                 </div>
                 <div className="icon Cart">
-                    <Link onClick={reload} to={'/cart'}><img src={process.env.PUBLIC_URL + '/pics/Cart.svg'} className="" alt="" /></Link>
+                    {/* <Link  to={'/cart'}> */}
+                        <img onClick={Reload} src={process.env.PUBLIC_URL + '/pics/Cart.svg'} className="" alt="" />
+                        {/* </Link> */}
                 </div>
                 <div className="Login">
                     <button onClick={LoginOpen} className="icon login_button" type="submit"><img src={process.env.PUBLIC_URL + '/pics/Logout.svg'} alt="" /> <span className="orin"></span> Login</button>
@@ -109,18 +221,12 @@ function Header(){
                                   
                                   <input placeholder="Password" className="LoginInput" type="password" value={password} onChange={(e) =>{setPassword(e.target.value)}}/>
                                 </div>
-                                <button className="LoginBtn" type="submit">Login</button>
+                                <button onClick={Sub} className="LoginBtn" type="submit">Login</button>
                             </form>
                         </div>
                         <div ref={Regis} className="RegisDiv">
                             
-                            {/* <form onSubmit={handleSubmitR}>
-                                <input className="LoginInput" placeholder="UserName" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                                <input className="LoginInput" placeholder="Example@gmail.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                <input className="LoginInput" placeholder="Password" type="password"value={password} onChange={(e) => setPassword(e.target.value)} />
-                                <input className="LoginInput" placeholder="Confirm Password" type="password" />
-                                <button type="submit" className="LoginBtn">Register</button>
-                            </form> */}
+                            
 
 
 <form onSubmit={handleSubmit}>

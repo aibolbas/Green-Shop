@@ -3,15 +3,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./lineproduct.css"
 
-function LineProduct(){
+function LineProduct(props){
     const [counter,setCounter] = useState(1)
-    const [price,setPrice] = useState(119 * counter)
+    const [price,setPrice] = useState(props.price * counter)
     function Dec(){
         if(counter > 1){
             setCounter(counter - 1)
         }
         if(counter >= 2){
-            setPrice(counter * 119-119)
+            setPrice(counter * props.price - props.price)
         }
         
     }
@@ -23,27 +23,38 @@ function LineProduct(){
             alert("99 is Max")
         }
         if(counter <= 99){
-            setPrice(counter * 119 + 119)
+            setPrice(counter * props.price + props.price)
         }
         
     }
     function reload(){
-        localStorage.clear()
-        Location.reload()
+        if (props.name == "Barbenton Daisy") {
+            localStorage.removeItem("Product")
+            Location.reload()
+        }
+        if (props.name == "Aluminum Plant") {
+            localStorage.removeItem("Alu")
+            Location.reload()
+        }
+        if (props.name == "Chinese Evergreen") {
+            localStorage.removeItem("Evergreen")
+            Location.reload()
+        }
+        
     }
     return(
         <div className="LineProduct">
             <div className="productOption productImg">
-                <img className="proImg" src={process.env.PUBLIC_URL + '/pics/Daisy.svg'} alt="" />
+                <img className="proImg" src={process.env.PUBLIC_URL + `/pics/${props.img}.svg`} alt="" />
             </div>
             <div className="productOption productName">
                 <div className="RName">
-                    <p>Barbenton Daisy</p>
+                    <p>{props.name}</p>
                     <p className="hollow">SKU: 1995751877966</p>
                 </div>
             </div>
             <div className=" productPrice">
-                <p>119$</p>
+                <p>{props.price}$</p>
             </div>
             <div className="productQuan">
                 <button onClick={Dec} className="Dec">-</button>
